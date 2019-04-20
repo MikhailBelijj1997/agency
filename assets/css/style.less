@@ -19,11 +19,11 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* Variables */
-@font__size--el:       16px;
-@font__size--l:        14px;
-@font__size--m:        12px;
+@font__size--el:       18px;
+@font__size--l:        16px;
+@font__size--m:        14px;
+@font__size--s:        12px;
 @font__size--s:        10px;
-@font__size--s:        8px;
 
 @font__size--level_1:  20px;
 @font__size--level_2:  60px;
@@ -36,6 +36,7 @@ time, mark, audio, video {
 @font__color--text--first: #fff;
 @font__color--text--second: #5dbbc1;
 @font__color--text--third: #130e27;
+@font__color--text--quarters: #161616;
 
 @background__color--first: #5dbbc1;
 
@@ -244,7 +245,7 @@ body{
   background-color: @font__color--text--third;
 }
 
-/* Services */
+/* Section */
 .section__title{
   text-transform: uppercase;
   font-size: @font__size--level_2;
@@ -253,4 +254,58 @@ body{
   span{
     color:@font__color--text--third;
   }
+}
+
+/* Services */
+.services{
+  margin-top: 80px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__img{
+  display: block;
+  margin: 0px auto;
+}
+
+.services__text{
+  color: @font__color--text--quarters;
+  text-align: center;
+
+  max-width: 165px;
+
+  margin: 25px 0px;
+}
+
+/* Call/Pricing */
+.callPricing .container{
+  display: flex;
+  align-items: center;
+
+  padding: 40px 0px;
+}
+
+.callPricing{
+  background-color: @background__color--first;
+
+  .btn{
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 270px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.callPricing__title{
+  margin-right: 110px;
 }

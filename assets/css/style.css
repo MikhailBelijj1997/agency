@@ -89,7 +89,7 @@ video {
 /* Variables */
 body {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "PT Serif";
   line-height: 1.6;
   color: #fff;
@@ -191,7 +191,7 @@ body {
   font-weight: 700;
 }
 .input {
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   height: 50px;
   padding: 20px;
@@ -242,7 +242,7 @@ body {
   border: 0px;
   background-color: #130e27;
 }
-/* Services */
+/* Section */
 .section__title {
   text-transform: uppercase;
   font-size: 60px;
@@ -251,4 +251,44 @@ body {
 }
 .section__title span {
   color: #130e27;
+}
+/* Services */
+.services {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.services__img {
+  display: block;
+  margin: 0px auto;
+}
+.services__text {
+  color: #161616;
+  text-align: center;
+  max-width: 165px;
+  margin: 25px 0px;
+}
+/* Call/Pricing */
+.callPricing .container {
+  display: flex;
+  align-items: center;
+  padding: 40px 0px;
+}
+.callPricing {
+  background-color: #5dbbc1;
+}
+.callPricing .btn {
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+  width: 270px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.callPricing__title {
+  margin-right: 110px;
 }
