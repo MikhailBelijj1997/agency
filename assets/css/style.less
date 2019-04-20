@@ -39,6 +39,7 @@ time, mark, audio, video {
 @font__color--text--quarters: #161616;
 
 @background__color--first: #5dbbc1;
+@background__color--second: #130e27;
 
 @max-width: 1000px;
 
@@ -236,13 +237,34 @@ body{
 .btn{
   color:@font__color--text--first;
   font-size: @font__size--level_1;
+  font-family: @font__family--title;
+
+  cursor: pointer;
 
   display: block;
   width: 100%;
   margin-top: @margin__checkbox;
   padding: 15px 0px;
   border: 0px;
+  border-radius: 7.5px;
   background-color: @font__color--text--third;
+}
+
+.btn(@width; @height){
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  margin: 0px;
+  padding: 0px;
+
+  width: @width;
+  height: @height;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Section */
@@ -262,11 +284,22 @@ body{
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.services__item{
+  position: relative;
+
+  margin-bottom: 60px;
 }
 
 .services__img{
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: block;
-  margin: 0px auto;
 }
 
 .services__text{
@@ -274,8 +307,7 @@ body{
   text-align: center;
 
   max-width: 165px;
-
-  margin: 25px 0px;
+  margin: 180px 0px 0px;
 }
 
 /* Call/Pricing */
@@ -287,25 +319,112 @@ body{
 }
 
 .callPricing{
-  background-color: @background__color--first;
-
   .btn{
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-
-    margin: 0px;
-    padding: 0px;
-
-    width: 270px;
-    height: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .btn(340px;50px);
   }
+  background-color: @background__color--first;
 }
 
 .callPricing__title{
   margin-right: 110px;
+}
+
+/* Card */
+.cards{
+  padding: 50px 0px 0px;
+
+  background-color: #efefef;
+}
+
+.card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__header{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: @font__size--level_2;
+  color: @font__color--text--third;
+  font-weight: 700;
+
+  margin-bottom: 30px;
+}
+
+.marker(){
+  &:after{
+    content: "";
+
+    display: block;
+    z-index: 1;
+
+    width: 0; 
+    height: 0;
+    border-top: 100px solid @background__color--first;
+    border-right: 100px solid transparent;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:before{
+    content: "Popular";
+
+    display: block;
+    z-index: 2;
+
+    position: absolute;
+    top: 5%;
+    left: 2%;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.card__item{
+  text-align: center;
+
+  padding: 30px;
+  margin: 0px 10px;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  .btn{
+    .btn(170px; 50px);
+  }
+}
+
+.card__item.marker{
+  .marker();
+  .btn{
+    color: @font__color--text--quarters;
+    background-color: @font__color--text--second;
+  }
+}
+
+.card__title, .card__text{
+  color:@font__color--text--quarters;
+}
+
+.card__title{
+  font-size: @font__size--level_1;
+}
+
+.card__price{
+  text-transform: uppercase;
+
+  font-weight: 700;
+  color:@font__color--text--third;
+  font-size: @font__size--level_2;
+  font-family: @font__family--title;
+}
+
+.card__text{
+  margin: 30px 0px;
 }

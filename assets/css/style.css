@@ -235,11 +235,14 @@ body {
 .btn {
   color: #fff;
   font-size: 20px;
+  font-family: Montserrat;
+  cursor: pointer;
   display: block;
   width: 100%;
   margin-top: 25px;
   padding: 15px 0px;
   border: 0px;
+  border-radius: 7.5px;
   background-color: #130e27;
 }
 /* Section */
@@ -257,16 +260,24 @@ body {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.services__item {
+  position: relative;
+  margin-bottom: 60px;
 }
 .services__img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
-  margin: 0px auto;
 }
 .services__text {
   color: #161616;
   text-align: center;
   max-width: 165px;
-  margin: 25px 0px;
+  margin: 180px 0px 0px;
 }
 /* Call/Pricing */
 .callPricing .container {
@@ -278,12 +289,13 @@ body {
   background-color: #5dbbc1;
 }
 .callPricing .btn {
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   margin: 0px;
   padding: 0px;
-  width: 270px;
+  width: 340px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -291,4 +303,86 @@ body {
 }
 .callPricing__title {
   margin-right: 110px;
+}
+/* Card */
+.cards {
+  padding: 50px 0px 0px;
+  background-color: #efefef;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+.card__header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #130e27;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.card__item {
+  text-align: center;
+  padding: 30px;
+  margin: 0px 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.card__item .btn {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__item.marker:after {
+  content: "";
+  display: block;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #5dbbc1;
+  border-right: 100px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card__item.marker:before {
+  content: "Popular";
+  display: block;
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  transform: rotate(-45deg);
+}
+.card__item.marker .btn {
+  color: #161616;
+  background-color: #5dbbc1;
+}
+.card__title,
+.card__text {
+  color: #161616;
+}
+.card__title {
+  font-size: 20px;
+}
+.card__price {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #130e27;
+  font-size: 60px;
+  font-family: Montserrat;
+}
+.card__text {
+  margin: 30px 0px;
 }
