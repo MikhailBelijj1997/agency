@@ -153,10 +153,10 @@ body {
   position: relative;
 }
 .inner {
-  width: 100%;
   max-width: 1000px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 1fr;
   position: absolute;
   top: 71%;
   transform: translateY(-50%);
@@ -176,6 +176,10 @@ body {
 .intro__text {
   margin-top: 50px;
   font-size: 20px;
+}
+.forms {
+  display: flex;
+  justify-content: flex-end;
 }
 .form {
   width: 400px;
@@ -266,6 +270,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .services__item {
   position: relative;
@@ -300,7 +305,7 @@ body {
   vertical-align: middle;
   margin: 0px;
   padding: 0px;
-  width: 340px;
+  max-width: 220px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -346,7 +351,7 @@ body {
   vertical-align: middle;
   margin: 0px;
   padding: 0px;
-  width: 170px;
+  max-width: 170px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -472,7 +477,7 @@ body {
   display: block;
   margin: 0px auto;
 }
-.galler__subtitle {
+.gallery__subtitle {
   margin-top: 40px;
   color: #161616;
   font-size: 25px;
@@ -498,4 +503,274 @@ body {
   font-family: Satisfy;
   text-transform: lowercase;
   color: #5dbbc1;
+}
+/* Media */
+@media (max-width: 990px) {
+  .container {
+    padding: 0px 20px;
+  }
+  /* callPricing */
+  .callPricing {
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 768px) {
+  /* Nav */
+  .nav__link {
+    font-size: 16px;
+  }
+  /* Intro */
+  .intro__inner {
+    max-width: 300px;
+  }
+  .intro__subtitle {
+    font-size: 50px;
+  }
+  .intro__text,
+  .check__text {
+    font-size: 16px;
+  }
+  .input {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .form {
+    width: 350px;
+  }
+  /* Section */
+  .section__title {
+    font-size: 50px;
+  }
+  .services__item {
+    width: 50%;
+  }
+  .services__text {
+    margin: 180px auto 0px;
+    display: block;
+  }
+  /* Card */
+  .card {
+    display: block;
+    padding-bottom: 15px;
+  }
+  .card__item {
+    margin: 0px 0px 15px 0px;
+  }
+  .card__item.marker:before {
+    left: 1%;
+  }
+  .card__header {
+    font-size: 50px;
+  }
+  .card__price {
+    font-size: 50px;
+  }
+  /* Testimonial */
+  .testimonialGallery {
+    padding: 60px 0px;
+  }
+  .testimonialGallery .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .testimonial__item {
+    box-sizing: border-box;
+    max-width: 80%;
+    margin: 30px auto 0px;
+  }
+  .testimonial__title,
+  .gallery__suptitle {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  /* Gallery */
+  .gallery {
+    margin: 50px 0px 0px 0px;
+  }
+  .gallery__item {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 660px) {
+  .header {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header__logo {
+    display: block;
+    margin: 0px auto;
+  }
+  .btn {
+    font-size: 14px;
+  }
+  /* Nav */
+  .nav {
+    display: none;
+  }
+  /* Inner */
+  .inner {
+    text-align: center;
+    display: block;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .intro__inner {
+    max-width: 100%;
+  }
+  .intro__subtitle {
+    margin-top: 80px;
+  }
+  .intro__text {
+    margin: 25px 0px;
+  }
+  /* Section */
+  .media--section {
+    margin-top: 260px;
+  }
+  .section__title {
+    text-align: center;
+  }
+  /* Service */
+  .services {
+    margin-top: 20px;
+  }
+  .services__item {
+    width: 100%;
+  }
+  /* CallPricing */
+  .callPricing__title {
+    margin-right: 50px;
+  }
+  .callPricing .btn {
+    max-width: 160px;
+  }
+}
+@media (max-width: 420px) {
+  .btn {
+    font-size: 12px;
+  }
+  /* CallPricing */
+  .callPricing .container {
+    display: block;
+  }
+  .callPricing__title {
+    text-align: center;
+    margin-right: 10px;
+  }
+  .callPricing .container {
+    padding: 25px 0px;
+  }
+  .callPricing .btn {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  /* Testimonial */
+  .testimonialGallery {
+    padding: 20px 0px;
+  }
+  .testimonial__title,
+  .gallery__suptitle {
+    margin-bottom: 0px;
+  }
+  .testimonial__item {
+    margin: 80px auto 0px;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .testimonial__suptext {
+    font-size: 15px;
+  }
+  .testimonial__images {
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .testimonial__text {
+    padding-top: 45px;
+  }
+  /* Gallery */
+  .gallery__items {
+    margin-top: 20px;
+  }
+  .gallery__item {
+    width: 50%;
+  }
+  .galler__subtitle {
+    margin: 0px;
+  }
+  /* Footer */
+  .footer {
+    padding: 15px 15px 25px 15px;
+  }
+  .footer .container {
+    flex-direction: column;
+  }
+  .footer__text {
+    order: 2;
+  }
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .form {
+    width: 100%;
+  }
+  /* Header */
+  .header__logo {
+    font-size: 40px;
+  }
+  /* Intro */
+  .intro__subtitle {
+    margin-top: 20px;
+  }
+  .form {
+    padding: 10px;
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+  .input:first-child {
+    margin-top: 10px;
+  }
+  .check__text {
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .btn {
+    margin-top: 10px;
+  }
+  /* Section */
+  .section__title {
+    font-size: 30px;
+  }
+  .media--section {
+    margin-top: 223px;
+  }
+  /* Services */
+  .services__item {
+    margin-bottom: 50px;
+  }
+  .services__text {
+    margin: 170px auto 0px;
+  }
+  /* Testimonial */
+  .testimonial__title,
+  .gallery__suptitle {
+    font-size: 30px;
+  }
+  /* Card */
+  .card__header {
+    font-size: 40px;
+  }
+  .card__header {
+    margin-bottom: 10px;
+  }
+  /* Gallery */
+  .gallery__subtitle {
+    margin-top: 0px;
+    font-size: 18px;
+  }
 }

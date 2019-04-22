@@ -19,15 +19,11 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* Variables */
-@font__size--el:       18px;
-@font__size--l:        16px;
-@font__size--m:        14px;
-@font__size--s:        12px;
-@font__size--s:        10px;
+@font__size:            16px;
 
-@font__size--level_1:  20px;
-@font__size--level_2:  60px;
-@font__size--level_3:  80px;
+@font__size--level_1:   20px;
+@font__size--level_2:   60px;
+@font__size--level_3:   80px;
 
 @font__family--logo:  Satisfy;
 @font__family--title: Montserrat;
@@ -53,7 +49,7 @@ time, mark, audio, video {
 body{
   margin: 0;
 
-  font-size: @font__size--l;
+  font-size: @font__size;
   font-family: @font__family--text;
   line-height: 1.6;
   color: @font__color--text--first;
@@ -133,11 +129,11 @@ body{
 }
 
 .inner{
-  width: 100%;
   max-width: @max-width;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 1fr;
 
   position: absolute;
   top: 71%;
@@ -166,6 +162,11 @@ body{
   font-size: 20px;
 }
 
+.forms {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .form{  
   width: 400px;
 
@@ -185,7 +186,7 @@ body{
 }
 
 .input{
-  font-size:@font__size--l;
+  font-size:@font__size;
 
   width: 100%;
   height: 50px;
@@ -271,7 +272,7 @@ body{
   margin: 0px;
   padding: 0px;
 
-  width: @width;
+  max-width: @width;
   height: @height;
 
   display: flex;
@@ -297,6 +298,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .services__item{
@@ -332,7 +334,7 @@ body{
 
 .callPricing{
   .btn{
-    .btn(340px;50px);
+    .btn(220px;50px);
   }
 
   .btn:hover{
@@ -504,7 +506,7 @@ body{
   margin-top: 20px;
 
   color:@font__color--text--third;
-  font-size: @font__size--el;
+  font-size: @font__size + 2px;
 }
 
 .testimonial__images,
@@ -547,7 +549,7 @@ body{
   margin:0px auto;
 }
 
-.galler__subtitle{
+.gallery__subtitle{
   margin-top: 40px;
 
   color:@font__color--text--quarters;
@@ -575,4 +577,361 @@ body{
 .footer__logo{
   .header__logo;
   color:@font__color--text--second;
+}
+
+/* Media */
+@font__size__media--m:   4px;
+@font__size__media--s:   6px;
+@font__size__media--se:  8px;
+@font__size__media--level-l: 50px;
+@font__size__media--level-s: 30px;
+
+@font__size__media--logo: 40px;
+
+@padding__media: 0px 20px;
+
+@media (max-width: 990px){
+  .container{
+    padding: 0px 20px;
+  }
+
+  /* callPricing */
+  .callPricing{
+    padding: @padding__media;
+  }
+}
+
+@media (max-width: 768px){
+  /* Nav */
+  .nav__link{
+    font-size: @font__size--level_1 - @font__size__media--m;
+  }
+
+  /* Intro */
+
+  .intro__inner {
+    max-width: 300px;
+  }
+
+  .intro__subtitle{
+    font-size: @font__size__media--level-l;
+  }
+
+  .intro__text, .check__text{
+    font-size: @font__size--level_1 - @font__size__media--m;  
+  }
+
+  .input{
+    font-size: @font__size--level_1 - @font__size__media--m - 2px; 
+
+    margin-bottom: 20px;
+  }
+
+  .form {
+    width: 350px;
+  }
+
+  /* Section */
+  .section__title{
+    font-size: @font__size__media--level-l;
+  }
+
+  .services__item{
+    width: 50%;
+  }
+
+  .services__text{
+    margin: 180px auto 0px;
+    display: block;
+  }
+
+  /* Card */
+  .card{
+    display: block;
+
+    padding-bottom: 15px;
+  }
+
+  .card__item{
+    margin: 0px 0px 15px 0px;
+  }
+
+  .card__item.marker:before{
+    left: 1%;
+  }
+
+  .card__header{
+    font-size: @font__size__media--level-l;
+  }
+
+  .card__price{
+    font-size: @font__size__media--level-l;
+  }
+
+  /* Testimonial */
+  .testimonialGallery{
+    padding: 60px 0px;
+  }
+
+  .testimonialGallery .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .testimonial__item{
+    box-sizing: border-box;
+
+    max-width: 80%;
+    margin: 30px auto 0px;
+  }
+
+  .testimonial__title, 
+  .gallery__suptitle{
+    font-size: @font__size__media--level-l;
+
+    margin-bottom: 30px;
+  }
+
+  /* Gallery */
+  .gallery{
+    margin: 50px 0px 0px 0px;
+  }
+
+  .gallery__item{
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 660px){
+  .header{
+    left:50%;
+    transform: translateX(-50%);
+  }
+
+  .header__logo{
+    display: block;
+    margin: 0px auto;
+  }
+
+  .btn{
+    font-size: @font__size--level_1 - @font__size__media--s;  
+  }
+
+  /* Nav */
+  .nav{
+    display: none;
+  }
+
+  /* Inner */
+  .inner{
+    text-align: center;
+
+    display: block;
+
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .intro__inner{
+    max-width: 100%;
+  }
+
+  .intro__subtitle{
+    margin-top: 80px;
+  }
+
+  .intro__text{
+    margin:25px 0px;
+  }
+
+  /* Section */
+  .media--section{
+    margin-top: 260px;
+  }
+
+  .section__title{
+    text-align: center;
+  }
+
+  /* Service */
+  .services{
+    margin-top: 20px;
+  }
+
+  .services__item{
+    width: 100%;
+  }
+
+  /* CallPricing */
+  .callPricing__title{
+    margin-right: 50px;
+  }
+
+  .callPricing .btn{
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 420px){
+  .btn{
+    font-size: @font__size--level_1 - @font__size__media--se; 
+  }
+
+  /* CallPricing */
+  .callPricing .container{
+    display: block;
+  }
+
+  .callPricing__title{
+    text-align: center;
+
+    margin-right: 10px;
+  }
+
+  .callPricing .container{
+    padding:25px 0px;
+  }
+
+  .callPricing .btn{
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  /* Testimonial */
+  .testimonialGallery{
+    padding: 20px 0px;
+  }
+
+  .testimonial__title, .gallery__suptitle{
+    margin-bottom: 0px;
+  }
+
+  .testimonial__item{
+    margin: 80px auto 0px;
+    padding: 20px;
+
+    font-size: @font__size - 2px;
+    text-align: center;
+  }
+
+  .testimonial__suptext{
+    font-size: 15px;
+  }
+
+  .testimonial__images{
+    top: -@testimonial__images / 2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .testimonial__text{
+    padding-top: 45px;
+  }
+
+  /* Gallery */
+  .gallery__items{
+    margin-top: 20px;
+  }
+
+  .gallery__item{
+    width:50%;
+  }
+
+  .galler__subtitle{
+    margin: 0px;
+  }
+
+  /* Footer */
+  .footer{
+    padding: 15px 15px 25px 15px;
+  }
+
+  .footer .container{
+    flex-direction: column;
+  }
+
+  .footer__text {
+    order: 2;
+  }
+
+  .footer__logo{
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 320px){
+  .form{
+    width:100%;
+  }
+
+  /* Header */
+  .header__logo{
+    font-size: @font__size__media--logo;
+  }
+
+  /* Intro */
+  .intro__subtitle{
+    margin-top:20px;
+  }
+
+  .form{
+    padding: 10px;
+  }
+
+  .input{
+    margin-bottom: 10px;
+  }
+
+  .input:first-child{
+    margin-top: 10px;
+  }
+
+  .check__text{
+    font-size: @font__size--level_1 - @font__size__media--se; 
+    vertical-align: top;
+  }
+
+  .btn{
+    margin-top: 10px;
+  }
+
+  /* Section */
+  .section__title{
+    font-size: @font__size__media--level-s;
+  }
+
+  .media--section{
+    margin-top: 223px;
+  }
+
+  /* Services */
+  .services__item{
+    margin-bottom: 50px;
+  }
+
+  .services__text{
+    margin: 170px auto 0px;
+  }
+
+  /* Testimonial */
+  .testimonial__title, .gallery__suptitle{
+    font-size: @font__size__media--level-s;
+  }
+
+  /* Card */
+  .card__header{
+    font-size: 40px;
+  }
+
+  .card__header{
+    margin-bottom: 10px;
+  }
+
+  /* Gallery */
+  .gallery__subtitle{
+    margin-top: 0px;
+
+    font-size: 18px;
+  }
 }
