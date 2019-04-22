@@ -128,12 +128,17 @@ body{
   position: relative;
 }
 
+.intro .container{
+  display: flex;
+  justify-content: space-between;
+}
+
 .inner{
+  width:96%;
   max-width: @max-width;
 
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 
   position: absolute;
   top: 71%;
@@ -159,6 +164,7 @@ body{
 
 .intro__text{
   margin-top: 50px;
+  margin-right: 20px;
   font-size: 20px;
 }
 
@@ -168,7 +174,7 @@ body{
 }
 
 .form{  
-  width: 400px;
+  max-width: 400px;
 
   padding: 30px 20px;
 
@@ -601,71 +607,15 @@ body{
   }
 }
 
-@media (max-width: 768px){
-  /* Nav */
-  .nav__link{
-    font-size: @font__size--level_1 - @font__size__media--m;
-  }
-
-  /* Intro */
-
-  .intro__inner {
-    max-width: 300px;
-  }
-
-  .intro__subtitle{
-    font-size: @font__size__media--level-l;
-  }
-
-  .intro__text, .check__text{
-    font-size: @font__size--level_1 - @font__size__media--m;  
-  }
-
-  .input{
-    font-size: @font__size--level_1 - @font__size__media--m - 2px; 
-
-    margin-bottom: 20px;
-  }
-
-  .form {
-    width: 350px;
-  }
-
+@media (max-width: 870px){
   /* Section */
   .section__title{
     font-size: @font__size__media--level-l;
   }
 
-  .services__item{
-    width: 50%;
-  }
-
-  .services__text{
-    margin: 180px auto 0px;
-    display: block;
-  }
-
-  /* Card */
-  .card{
-    display: block;
-
-    padding-bottom: 15px;
-  }
-
-  .card__item{
-    margin: 0px 0px 15px 0px;
-  }
-
-  .card__item.marker:before{
-    left: 1%;
-  }
-
-  .card__header{
-    font-size: @font__size__media--level-l;
-  }
-
-  .card__price{
-    font-size: @font__size__media--level-l;
+  /* Intro */
+  .intro__subtitle{
+    font-size: @font__size__media--level-l + 10px;
   }
 
   /* Testimonial */
@@ -703,6 +653,70 @@ body{
   }
 }
 
+@media (max-width: 768px){
+  /* Nav */
+  .nav__link{
+    font-size: @font__size--level_1 - @font__size__media--m;
+  }
+
+  /* Intro */
+  .intro__subtitle{
+    font-size: @font__size__media--level-l;
+  }
+
+  .intro__inner {
+    max-width: 300px;
+  }
+
+  .intro__text, .check__text{
+    font-size: @font__size--level_1 - @font__size__media--m;  
+  }
+
+  .input{
+    font-size: @font__size--level_1 - @font__size__media--m - 2px; 
+
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: block;
+    margin: 0px auto;
+  }
+
+  /* Section */
+  .services__item{
+    width: 50%;
+  }
+
+  .services__text{
+    margin: 180px auto 0px;
+    display: block;
+  }
+
+  /* Card */
+  .card{
+    display: block;
+
+    padding-bottom: 15px;
+  }
+
+  .card__item{
+    margin: 0px 0px 15px 0px;
+  }
+
+  .card__item.marker:before{
+    left: 1%;
+  }
+
+  .card__header{
+    font-size: @font__size__media--level-l;
+  }
+
+  .card__price{
+    font-size: @font__size__media--level-l;
+  }
+}
+
 @media (max-width: 660px){
   .header{
     left:50%;
@@ -730,15 +744,12 @@ body{
     display: block;
 
     left: 50%;
+    top: 74%;
     transform: translate3d(-50%, -50%, 0);
   }
 
   .intro__inner{
     max-width: 100%;
-  }
-
-  .intro__subtitle{
-    margin-top: 80px;
   }
 
   .intro__text{
@@ -798,6 +809,28 @@ body{
     max-width: 100%;
   }
 
+  /* Section */
+  .section__title{
+    font-size: @font__size__media--level-s;
+  }
+
+  /* Intro */
+  .intro{
+    top:80%;
+  }
+
+  .intro__subtitle{
+    font-size: @font__size__media--level-s + 10px;
+  }
+
+  .intro__text{
+    margin:15px 0px;
+  }
+
+  .inner{
+    top: 74%;
+  }
+
   /* Testimonial */
   .testimonialGallery{
     padding: 20px 0px;
@@ -805,6 +838,8 @@ body{
 
   .testimonial__title, .gallery__suptitle{
     margin-bottom: 0px;
+
+    font-size: @font__size__media--level-s;
   }
 
   .testimonial__item{
@@ -838,7 +873,9 @@ body{
     width:50%;
   }
 
-  .galler__subtitle{
+  .gallery__subtitle{
+    font-size: @font__size__media--level-s - 10px;
+
     margin: 0px;
   }
 
@@ -871,8 +908,8 @@ body{
   }
 
   /* Intro */
-  .intro__subtitle{
-    margin-top:20px;
+  .inner{
+    top:65%;
   }
 
   .form{
@@ -902,7 +939,7 @@ body{
   }
 
   .media--section{
-    margin-top: 223px;
+    margin-top: 140px;
   }
 
   /* Services */
