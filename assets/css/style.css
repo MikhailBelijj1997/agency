@@ -710,9 +710,6 @@ body {
   }
 }
 @media (max-width: 420px) {
-  .btn {
-    font-size: 12px;
-  }
   /* CallPricing */
   .callPricing .container {
     display: block;
@@ -744,6 +741,9 @@ body {
   }
   .inner {
     top: 74%;
+  }
+  .btn {
+    font-size: 12px;
   }
   /* Testimonial */
   .testimonialGallery {
@@ -797,9 +797,6 @@ body {
   }
 }
 @media (max-width: 324px) {
-  .form {
-    width: 100%;
-  }
   /* Header */
   .header__logo {
     font-size: 40px;
@@ -813,6 +810,9 @@ body {
   }
   .input {
     margin-bottom: 10px;
+  }
+  .form {
+    width: 100%;
   }
   .input:first-child {
     margin-top: 10px;
